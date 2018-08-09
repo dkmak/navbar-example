@@ -1,0 +1,34 @@
+<!-- This page will be redirected from any url if you are not logged in -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <link rel="stylesheet" type="text/css" href="mystyle.css"/>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <title>Login to BlockBox</title>
+</head>
+<body>
+<h2>Login to BlockBox</h2>
+<!-- Set the method to POST to avoid username/password showing on URL
+     Disable the default action because our JS function will handle it. -->
+
+<form id="login_form" method="POST" action="form-recaptcha">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username">
+    <br>
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password">
+    <br>
+    <input type="submit" value="Login"><br><br>
+    <!-- <div class="g-recaptcha" data-sitekey="6LfhlFgUAAAAALx-jn1ArfxJr35uJ1N8rDRfbDdi"></div> -->
+</form>
+
+<div id="login_error_message"></div>
+
+<!-- include jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- include our own JS file -->
+<script src="./login.js"></script>
+
+</body>
+</html>
